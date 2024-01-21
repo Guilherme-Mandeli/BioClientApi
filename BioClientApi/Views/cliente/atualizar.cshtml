@@ -1,0 +1,154 @@
+﻿@model ClientModel
+@{
+    ViewData["Title"] = "Atualizar cliente";
+}
+
+<div>
+    <h1 class="display-5 mt-5 mb-5">Atualizar cliente</h1>
+    <section>
+        <form asp-action="Atualizar" method="post" id="updateUserForm" class="d-flex flex-wrap gap-5">
+            <div class="form-group d-flex flex-column col-lg-5 border p-4 bg-light" style="max-width: 380px;">
+                <h2 class="h4">Informações</h2>
+                <input asp-for="Id" type="hidden" />
+                <input asp-for="Nome" class="form-control my-2" placeholder="Nome" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <input asp-for="Email" class="form-control my-2" placeholder="E-mail" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+                <input asp-for="CPF" id="cpfInput" class="form-control my-2" placeholder="CPF (somente números)" />
+                <span asp-validation-for="RG" class="text-danger"></span>
+                <input asp-for="RG" id="rgInput" class="form-control my-2" placeholder="RG (somente números)" />
+            </div>
+
+            <div class="form-group d-flex flex-column col-lg-3 border p-4 bg-light" style="max-width: 380px;">
+                <h2 class="h4">Meios de contato</h2>
+                <div id="contactNumbers">
+                    
+                    @for (int i = 0; i < Model.Contatos.Count; i++)
+                    {
+                        @if (i == 0)
+                        {
+                            <div id="contact-number-0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <select asp-for="Contatos[i].Tipo" class="form-select my-2" aria-label="Selecionar...">
+                                            <option value="Residencial">Residencial</option>
+                                            <option value="Comercial">Comercial</option>
+                                            <option value="Celular">Celular</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 mb-2">
+                                    <div class="col-3">
+                                        <input asp-for="Contatos[i].DDD" type="text" class="form-control dddInput" placeholder="DDD" value="@Model.Contatos[i].DDD" />
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Contatos[i].Telefone" type="text" class="form-control phoneInput" placeholder="Número" value="@Model.Contatos[i].Telefone" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        @if (i > 0)
+                        {
+                            <div id="contact-number-@i" class="mt-3 border-top pt-1">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <select asp-for="Contatos[i].Tipo" class="form-select my-2 col-5" aria-label="Selecionar...">
+                                            <option value="Residencial">Residencial</option>
+                                            <option value="Comercial">Comercial</option>
+                                            <option value="Celular">Celular</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 p-0 d-flex align-items-center">
+                                        <button type="button" onclick="removeContactNumber(@i)" class="btn btn-danger" style="width: 80%;">X</button>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-3">
+                                        <input asp-for="Contatos[i].DDD" type="text" class="form-control dddInput" placeholder="DDD" value="@Model.Contatos[i].DDD" />
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Contatos[i].Telefone" type="text" class="form-control phoneInput" placeholder="Número" value="@Model.Contatos[i].Telefone" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    }
+
+
+                </div>
+                <button type="button" onclick="addContactNumber()" class="btn btn-primary mt-2">+ Novo número</button>
+            </div>
+
+            <div class="w-100 form-group border p-4 bg-light">
+                <h2 class="h4 w-100">Endereços</h2>
+                <div id="contactAddress">
+                    @for (int i = 0; i < Model.Enderecos.Count; i++)
+                    {
+                        @if (i == 0)
+                        {
+                            <div id ="contact-address-0" class="d-flex flex-row flex-wrap gap-5">
+                                <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                                    <select asp-for="Enderecos[i].Tipo" class="form-select m-2" aria-label="Selecionar...">
+                                        <option value="Preferencial">Preferencial</option>
+                                        <option value="Entrega">Entrega</option>
+                                        <option value="Cobrança">Cobrança</option>
+                                    </select>
+                                    <input asp-for="Enderecos[i].Estado" class="form-control m-2" placeholder="Estado" value="@Model.Enderecos[i].Estado" />
+                                    <span asp-validation-for="Enderecos[0].CEP" class="text-danger"></span>
+                                    <input asp-for="Enderecos[i].CEP" class="form-control cepInputs m-2" placeholder="CEP" value="@Model.Enderecos[i].CEP" />
+                                    <input asp-for="Enderecos[i].Cidade" class="form-control m-2" placeholder="Cidade" value="@Model.Enderecos[i].Cidade" />
+                                </div>
+                                <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                                    <input asp-for="Enderecos[i].Bairro" class="form-control m-2" placeholder="Bairro" value="@Model.Enderecos[i].Bairro" />
+                                    <input asp-for="Enderecos[i].Logradouro" class="form-control m-2" placeholder="Rua" value="@Model.Enderecos[i].Logradouro" />
+                                    <input asp-for="Enderecos[i].Numero" type="text" class="form-control numberAddressInput m-2" placeholder="Número" value="@Model.Enderecos[i].Numero" />
+                                    <input asp-for="Enderecos[i].Complemento" class="form-control m-2" placeholder="Complemento" value="@Model.Enderecos[i].Complemento" />
+                                </div>
+                                <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                                    <textarea asp-for="Enderecos[i].Referencia" class="form-control m-2" placeholder="Referência">@Model.Enderecos[i].Referencia</textarea>
+                                </div>
+                            </div>
+                        }
+                        
+                        @if (i > 0)
+                        {
+                            <div id="contact-address-@i" class="d-flex flex-row flex-wrap justify-content-center gap-5 mt-3 border-top pt-3">
+                                <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                                    <select asp-for="Enderecos[i].Tipo" class="form-select m-2" aria-label="Selecionar...">
+                                        <option value="Preferencial">Preferencial</option>
+                                        <option value="Entrega">Entreag</option>
+                                        <option value="Cobrança">Cobrança</option>
+                                    </select>
+                                    <input asp-for="Enderecos[i].Estado" class="form-control m-2" placeholder="Estado" value="@Model.Enderecos[i].Estado" />
+                                    <input asp-for="Enderecos[i].CEP" class="form-control cepInputs m-2" placeholder="CEP" value="@Model.Enderecos[i].CEP" />
+                                    <input asp-for="Enderecos[i].Cidade" class="form-control m-2" placeholder="Cidade" value="@Model.Enderecos[i].Cidade" />
+                                </div>
+                                <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                                    <input asp-for="Enderecos[i].Bairro" class="form-control m-2" placeholder="Bairro" value="@Model.Enderecos[i].Bairro" />
+                                    <input asp-for="Enderecos[i].Logradouro" class="form-control m-2" placeholder="Rua" value="@Model.Enderecos[i].Logradouro" />
+                                    <input asp-for="Enderecos[i].Numero" type="text" class="form-control numberAddressInput m-2" placeholder="Número" value="@Model.Enderecos[i].Numero" />
+                                    <input asp-for="Enderecos[i].Complemento" class="form-control m-2" placeholder="Complemento" value="@Model.Enderecos[i].Complemento" />
+                                </div>
+                                <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                                    <textarea asp-for="Enderecos[i].Referencia" class="form-control m-2" placeholder="Referencia">@Model.Enderecos[i].Referencia</textarea>
+                                    <div class="w-100 p-0 d-flex align-items-center mt-1">
+                                        <button type="button" onclick="removeContactAddress(@i)" class="btn btn-danger mt-1">Remover endereço</button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    }
+                </div>
+                <button type="button" onclick="addContactAddress()" class="btn btn-primary mt-3">+ Novo Endereço</button>
+            </div>
+
+            <div class="w-100 mb-5">
+                <a role="button" class="btn btn-secondary m-1" asp-controller="cliente" asp-action="listar">Cancelar</a>
+                <button type="submit" class="btn btn-primary m-1" asp-action="Atualizar">Atualizar cliente</button>
+            </div>
+        </form>
+    </section>
+</div>

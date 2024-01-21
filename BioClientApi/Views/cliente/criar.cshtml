@@ -1,0 +1,84 @@
+﻿@model ClientModel
+@{
+    ViewData["Title"] = "Criar um novo cliente";
+}
+
+<div>
+    <h1 class="display-5 my-5">Criar um novo cliente</h1>
+    <section>
+        <form asp-action="criar" method="post" id="createNewUserForm" class="d-flex flex-wrap gap-5">
+            <div class="form-group d-flex flex-column col-lg-5 border p-4 bg-light" style="max-width: 380px;">
+                <h2 class="h4">Informações</h2>
+                <input asp-for="Nome" class="form-control my-2" placeholder="Nome" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <input asp-for="Email" class="form-control my-2" placeholder="E-mail (obrigátório)" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+                <input asp-for="CPF" id="cpfInput" class="form-control my-2" placeholder="CPF (obrigátório)" />
+                <span asp-validation-for="RG" class="text-danger"></span>
+                <input asp-for="RG" id="rgInput" class="form-control my-2" placeholder="RG (obrigátório)" />
+            </div>
+
+            <div class="form-group d-flex flex-column col-lg-3 border p-4 bg-light" style="max-width: 380px;">
+                <h2 class="h4">Meios de contato</h2>
+                <div id="contactNumbers">
+                    <div id="contact-number-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <select asp-for="Contatos[0].Tipo" class="form-select my-2" aria-label="Selecionar...">
+                                    <option value="Residencial" selected>Residencial</option>
+                                    <option value="Comercial">Comercial</option>
+                                    <option value="Celular">Celular</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-2 mb-2">
+                            <div class="col-3">
+                                <input asp-for="Contatos[0].DDD" type="text" class="form-control dddInput" placeholder="DDD" />
+                            </div>
+                            <div class="col-9">
+                                <input asp-for="Contatos[0].Telefone" type="text" class="form-control phoneInput" placeholder="Número" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" onclick="addContactNumber()" class="btn btn-primary mt-2">+ Novo número</button>
+            </div>
+
+
+            <div class="w-100 form-group border p-4 bg-light">
+                <h2 class="h4 w-100">Endereços</h2>
+                <div id="contactAddress">
+                    <div id="contact-address-0" class="d-flex flex-row flex-wrap gap-5">
+                        <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                            <select asp-for="Enderecos[0].Tipo" class="form-select m-2" aria-label="Selecionar...">
+                                <option value="Preferencial" selected>Preferencial</option>
+                                <option value="Entrega">Entrega</option>
+                                <option value="Cobrança">Cobrança</option>
+                            </select>
+                            <input asp-for="Enderecos[0].Estado" class="form-control m-2" placeholder="Estado" />
+                            <span asp-validation-for="Enderecos[0].CEP" class="text-danger"></span>
+                            <input asp-for="Enderecos[0].CEP" class="form-control cepInputs m-2" placeholder="CEP (obrigátório)" />
+                            <input asp-for="Enderecos[0].Cidade" class="form-control m-2" placeholder="Cidade" />
+                            
+                        </div>
+                        <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                            <input asp-for="Enderecos[0].Bairro" class="form-control m-2" placeholder="Bairro" />
+                            <input asp-for="Enderecos[0].Logradouro" class="form-control m-2" placeholder="Rua" />
+                            <input asp-for="Enderecos[0].Numero" type="text" class="form-control numberAddressInput m-2" placeholder="Número" />
+                            <input asp-for="Enderecos[0].Complemento" class="form-control m-2" placeholder="Complemento" />
+                        </div>
+                        <div class="w-100 d-flex flex-column align-items-center" style="max-width: 380px;">
+                            <textarea asp-for="Enderecos[0].Referencia" class="form-control m-2" placeholder="Referência"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" onclick="addContactAddress()" class="btn btn-primary mt-3">+ Novo Endereço</button>
+            </div>
+
+            <div class="w-100 mb-5">
+                <a role="button" class="btn btn-secondary m-1" asp-controller="cliente" asp-action="listar">Cancelar</a>
+                <button type="submit" class="btn btn-primary m-1" asp-action="criar">Criar cliente</button>
+            </div>
+        </form>
+    </section>
+</div>

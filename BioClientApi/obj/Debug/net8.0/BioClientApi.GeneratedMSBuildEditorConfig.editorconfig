@@ -1,0 +1,63 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BioClientApi
+build_property.RootNamespace = BioClientApi
+build_property.ProjectDir = C:\Users\guilm\source\repos\BioClientApi\BioClientApi\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\guilm\source\repos\BioClientApi\BioClientApi
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/cliente/atualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50ZVxhdHVhbGl6YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/cliente/confirmarRemover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50ZVxjb25maXJtYXJSZW1vdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/cliente/criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50ZVxjcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/cliente/listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50ZVxsaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guilm/source/repos/BioClientApi/BioClientApi/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1y8benjmby

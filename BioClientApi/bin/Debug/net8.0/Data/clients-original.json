@@ -1,0 +1,410 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Guilherme Mandeli",
+    "Email": "guil.mandeli@gmail.com",
+    "CPF": "123.456.789-01",
+    "RG": "987654321",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Residencial",
+        "DDD": 11,
+        "Telefone": 987654321
+      },
+      {
+        "Id": 1,
+        "Tipo": "Celular",
+        "DDD": 11,
+        "Telefone": 998198765
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Entrega",
+        "CEP": "12345-678",
+        "Logradouro": "Rua A",
+        "Numero": 123,
+        "Bairro": "Centro",
+        "Complemento": "",
+        "Cidade": "Cidade A",
+        "Estado": "SP",
+        "Referencia": "Próximo à praça"
+      },
+      {
+        "Id": 1,
+        "Tipo": "Residência",
+        "CEP": "12345-678",
+        "Logradouro": "Rua A2",
+        "Numero": 123,
+        "Bairro": "Centro",
+        "Complemento": "T4 Apto 32",
+        "Cidade": "Cidade A2",
+        "Estado": "SP",
+        "Referencia": ""
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Nome": "Maria Oliveira",
+    "Email": "maria@email.com",
+    "CPF": "987.654.321-09",
+    "RG": "123456789",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Comercial",
+        "DDD": 21,
+        "Telefone": 987654323
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Cobrança",
+        "CEP": "54321-987",
+        "Logradouro": "Rua B",
+        "Numero": 456,
+        "Bairro": "Bairro B",
+        "Complemento": "Sala 101",
+        "Cidade": "Cidade B",
+        "Estado": "RJ",
+        "Referencia": "Próximo ao banco"
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Nome": "Carlos Santos",
+    "Email": "carlos@email.com",
+    "CPF": "345.678.901-23",
+    "RG": "876543210",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Celular",
+        "DDD": 31,
+        "Telefone": 987654324
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Residencial",
+        "CEP": "98765-432",
+        "Logradouro": "Avenida C",
+        "Numero": 789,
+        "Bairro": "Bairro C",
+        "Complemento": "Apto 201",
+        "Cidade": "Cidade C",
+        "Estado": "MG",
+        "Referencia": "Próximo ao parque"
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Nome": "Ana Souza",
+    "Email": "ana@email.com",
+    "CPF": "567.890.123-45",
+    "RG": "210987654",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Residencial",
+        "DDD": 41,
+        "Telefone": 987654325
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Entrega",
+        "CEP": "67890-123",
+        "Logradouro": "Rua D",
+        "Numero": 234,
+        "Bairro": "Bairro D",
+        "Complemento": "",
+        "Cidade": "Cidade D",
+        "Estado": "PR",
+        "Referencia": "Próximo à escola"
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Nome": "Pedro Lima",
+    "Email": "pedro@email.com",
+    "CPF": "789.012.345-67",
+    "RG": "109876543",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Celular",
+        "DDD": 51,
+        "Telefone": 987654326
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Cobrança",
+        "CEP": "23456-789",
+        "Logradouro": "Avenida E",
+        "Numero": 567,
+        "Bairro": "Bairro E",
+        "Complemento": "Sala 202",
+        "Cidade": "Cidade E",
+        "Estado": "RS",
+        "Referencia": "Próximo ao supermercado"
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Nome": "Isabela Silva",
+    "Email": "isabela@email.com",
+    "CPF": "901.234.567-89",
+    "RG": "543210987",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Comercial",
+        "DDD": 41,
+        "Telefone": 987654327
+      },
+      {
+        "Id": 1,
+        "Tipo": "Residencial",
+        "DDD": 41,
+        "Telefone": 987654328
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Residência",
+        "CEP": "34567-890",
+        "Logradouro": "Rua F",
+        "Numero": 789,
+        "Bairro": "Bairro F",
+        "Complemento": "Casa 10",
+        "Cidade": "Cidade F",
+        "Estado": "PR",
+        "Referencia": "Próximo à praia"
+      },
+      {
+        "Id": 1,
+        "Tipo": "Entrega",
+        "CEP": "45678-901",
+        "Logradouro": "Avenida G",
+        "Numero": 890,
+        "Bairro": "Bairro G",
+        "Complemento": "",
+        "Cidade": "Cidade G",
+        "Estado": "SP",
+        "Referencia": "Próximo ao shopping"
+      }
+    ]
+  },
+  {
+    "Id": 7,
+    "Nome": "Fernando Costa",
+    "Email": "fernando@email.com",
+    "CPF": "234.567.890-12",
+    "RG": "765432109",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Celular",
+        "DDD": 31,
+        "Telefone": 987654329
+      },
+      {
+        "Id": 1,
+        "Tipo": "Comercial",
+        "DDD": 31,
+        "Telefone": 987654330
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Empresa",
+        "CEP": "56789-012",
+        "Logradouro": "Rua H",
+        "Numero": 123,
+        "Bairro": "Bairro H",
+        "Complemento": "Andar 5",
+        "Cidade": "Cidade H",
+        "Estado": "MG",
+        "Referencia": "Próximo à estação de metrô"
+      }
+    ]
+  },
+  {
+    "Id": 8,
+    "Nome": "Leticia Oliveira",
+    "Email": "leticia@email.com",
+    "CPF": "678.901.234-56",
+    "RG": "5432109876",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Celular",
+        "DDD": 21,
+        "Telefone": 987654331
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Cobrança",
+        "CEP": "78901-234",
+        "Logradouro": "Avenida I",
+        "Numero": 456,
+        "Bairro": "Bairro I",
+        "Complemento": "Sala 303",
+        "Cidade": "Cidade I",
+        "Estado": "RJ",
+        "Referencia": "Próximo à universidade"
+      }
+    ]
+  },
+  {
+    "Id": 9,
+    "Nome": "Ricardo Souza",
+    "Email": "ricardo@email.com",
+    "CPF": "890.123.456-78",
+    "RG": "2109876543",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Residencial",
+        "DDD": 51,
+        "Telefone": 987654332
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Residencial",
+        "CEP": "89012-345",
+        "Logradouro": "Rua J",
+        "Numero": 789,
+        "Bairro": "Bairro J",
+        "Complemento": "Apto 15",
+        "Cidade": "Cidade J",
+        "Estado": "RS",
+        "Referencia": "Próximo ao parque"
+      }
+    ]
+  },
+  {
+    "Id": 10,
+    "Nome": "Amanda Santos",
+    "Email": "amanda@email.com",
+    "CPF": "012.345.678-90",
+    "RG": "4321098765",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Celular",
+        "DDD": 11,
+        "Telefone": 987654333
+      },
+      {
+        "Id": 1,
+        "Tipo": "Comercial",
+        "DDD": 11,
+        "Telefone": 987654334
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Entrega",
+        "CEP": "90123-456",
+        "Logradouro": "Rua K",
+        "Numero": 234,
+        "Bairro": "Bairro K",
+        "Complemento": "",
+        "Cidade": "Cidade K",
+        "Estado": "SP",
+        "Referencia": "Próximo ao teatro"
+      }
+    ]
+  },
+  {
+    "Id": 11,
+    "Nome": "Rodrigo Lima",
+    "Email": "rodrigo@email.com",
+    "CPF": "123.456.789-01",
+    "RG": "5432109876",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Comercial",
+        "DDD": 21,
+        "Telefone": 987654335
+      },
+      {
+        "Id": 1,
+        "Tipo": "Celular",
+        "DDD": 21,
+        "Telefone": 987654336
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Cobrança",
+        "CEP": "34567-890",
+        "Logradouro": "Avenida L",
+        "Numero": 567,
+        "Bairro": "Bairro L",
+        "Complemento": "Sala 404",
+        "Cidade": "Cidade L",
+        "Estado": "RJ",
+        "Referencia": "Próximo ao mercado"
+      }
+    ]
+  },
+  {
+    "Id": 12,
+    "Nome": "Tatiane Silva",
+    "Email": "tatiane@email.com",
+    "CPF": "234.567.890-12",
+    "RG": "7654321098",
+    "Contatos": [
+      {
+        "Id": 0,
+        "Tipo": "Residencial",
+        "DDD": 31,
+        "Telefone": 987654337
+      },
+      {
+        "Id": 1,
+        "Tipo": "Celular",
+        "DDD": 31,
+        "Telefone": 987654338
+      }
+    ],
+    "Enderecos": [
+      {
+        "Id": 0,
+        "Tipo": "Empresa",
+        "CEP": "45678-901",
+        "Logradouro": "Rua M",
+        "Numero": 890,
+        "Bairro": "Bairro M",
+        "Complemento": "Andar 7",
+        "Cidade": "Cidade M",
+        "Estado": "MG",
+        "Referencia": "Próximo à estação de trem"
+      }
+    ]
+  }
+]

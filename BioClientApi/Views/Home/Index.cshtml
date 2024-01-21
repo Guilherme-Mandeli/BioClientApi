@@ -1,0 +1,52 @@
+﻿@model HomeModel
+@{
+    ViewData["Title"] = "Página inicial";
+}
+
+<section>
+    <h1 class="display-5 mt-5 mb-4">Projeto desenvolvido por Guilherme Mandeli</h1>
+    <p>WhatsApp: <a href="https://wa.me/5511998198765" target="_blank">(11) 99819-8765</a></p>
+    <p>E-mail: <a href="mailto:guil.mandeli@gmail.com" target="_blank">guil.mandeli@gmail.com</a></p>
+</section>
+
+<section class="mt-5 d-inline-block me-4">
+    <h2 class="mb-3 fw-normal" style="font-size: 24px;">Ver lista de clientes</h2>
+    <a asp-controller="cliente" asp-action="listar" class="btn btn-primary">Clientes</a>
+</section>
+
+<section class="mt-5 d-inline-block">
+    <h2 class="mb-3 fw-normal" style="font-size: 24px;">Adicionar um novo cliente</h2>
+    <a asp-controller="cliente" asp-action="criar" class="btn btn-primary">Criar cliente</a>
+</section>
+
+<section class="mt-5">
+    <p>Olá, equipe 4Bio! Este é meu teste prático.</p>
+    <p>Para este teste consegui resolver todos os itens solicitados:</p>
+    <ul>
+        <li>
+            Listar todos os clientes cadastrados
+            <ul>
+                <li>Com filtros, opcionais, de nome e/ou e-mail e/ou CPF.</li>
+            </ul>
+        </li>
+        <li>
+            Adicionar Novo Cliente
+        </li>
+        <li>
+            Atualizar Cliente Existente
+            <ul>
+                <li>Incluir/Atualizar Contato ao Cliente Existente</li>
+                <li>Incluir/Atualizar Endereço ao Cliente Existente</li>
+            </ul>
+        </li>
+        <li>
+            Remover Cliente
+            <ul>
+                <li>Remover Contato Existente</li>
+                <li>Remover Endereço Existente</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Como desafio tive o tempo, realmente gostaria de ter refinado um pouco mais algumas linhas de código.</p>
+    <p>Apesar disso, e que não temos a melhor interface por questão de tempo, acredito que vão ficar satisfeitos com a entrega.</p>
+</section>

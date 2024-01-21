@@ -1,0 +1,66 @@
+﻿@model ClientModel
+@{
+    ViewData["Title"] = "Confirmar remoção de cliente";
+}
+
+<div class="text-center m-5">
+    <h3>Confirmar remoção de cliente</h3>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <table class="table table-bordered" style="max-width: 450px;">
+        <thead>
+            <tr>
+                <th colspan="2" class="text-center">Você tem certeza que deseja remover o cliente abaixo?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>@Model.Nome</td>
+            </tr>
+            <tr>
+                <th>CPF</th>
+                <td>@FormatarCPF(Model.CPF)</td>
+            </tr>
+            <tr>
+                <th>RG</th>
+                <td>@FormatarRG(Model.RG)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="d-flex justify-content-center">
+    <a role="button" class="btn btn-secondary m-2" asp-controller="cliente" asp-action="listar">Voltar sem remover</a>
+    <a role="button" class="btn btn-danger m-2" asp-controller="cliente" asp-action="remover" asp-route-id="@Model.Id">Remover cliente</a>
+</div>
+
+@functions {
+    // Formatar CPF
+    private string FormatarCPF(string cpf)
+    {
+        if (cpf.Length == 11)
+        {
+            return $"{cpf.Substring(0, 3)}.{cpf.Substring(3, 3)}.{cpf.Substring(6, 3)}-{cpf.Substring(9)}";
+        }
+
+        return cpf;
+    }
+
+    // Formatar RG
+    private string FormatarRG(string rg)
+    {
+        if (!string.IsNullOrEmpty(rg) && rg.Length >= 9)
+        {
+            return $"{rg.Substring(0, 2)}.{rg.Substring(2, 3)}.{rg.Substring(5, 3)}-{rg.Substring(8)}";
+        }
+
+        return rg;
+    }
+}
